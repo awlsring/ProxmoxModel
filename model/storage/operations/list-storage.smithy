@@ -3,9 +3,9 @@ $version: "2.0"
 namespace awlsring.proxmox
 
 @readonly
-@http(method: "GET", uri: "/nodes", code: 200)
-operation ListNodes {
-    output: ListNodesOutput,
+@http(method: "GET", uri: "/storage", code: 200)
+operation ListStorage {
+    output: ListStorageOutput,
     errors: [
         InvalidInputError,
         InternalServerError
@@ -13,8 +13,8 @@ operation ListNodes {
 }
 
 @output
-structure ListNodesOutput {
+structure ListStorageOutput {
     @required
     @jsonName("data")
-    summaries: NodeSummaries
+    summaries: StorageSummaries
 }

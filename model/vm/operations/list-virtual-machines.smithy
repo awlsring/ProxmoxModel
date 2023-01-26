@@ -23,5 +23,6 @@ structure ListVirtualMachinesInput {
 @output
 structure ListVirtualMachinesOutput {
     @required
-    data: VirtualMachineSummaries
+    @jsonName("data")
+    summaries: VirtualMachineSummaries
 }
