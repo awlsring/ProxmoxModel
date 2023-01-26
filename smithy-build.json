@@ -8,6 +8,19 @@
           "protocol": "aws.protocols#restJson1"
         }
       }
+    },
+    "typescript": {
+      "plugins": {
+        "typescript-codegen": {
+          "service": "awlsring.proxmox#Proxmox",  
+          "targetNamespace": "proxmox",  
+          "package": "@awlsring/proxmox",  
+          "packageVersion": "0.0.1",  
+          "packageJson": {  
+            "license": "Apache-2.0"  
+          }
+        }
+      }
     }
   }
 }
