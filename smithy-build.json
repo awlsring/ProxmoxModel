@@ -1,0 +1,13 @@
+{
+  "version": "2.0",
+  "projections": {
+    "open-api": {
+      "plugins": {
+        "openapi": {
+          "service": "awlsring.proxmox#Proxmox",
+          "protocol": "aws.protocols#restJson1"
+        }
+      }
+    }
+  }
+}
