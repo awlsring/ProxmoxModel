@@ -14,6 +14,6 @@ use aws.protocols#restJson1
 )
 service Proxmox {
     version: "2023-01-01",
-    resources: [ Node, Storage, Access ],
+    resources: [ Node, Storage, Access, Cluster ],
     operations: [ GetVersion ]
 }
