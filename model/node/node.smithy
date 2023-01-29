@@ -5,7 +5,7 @@ namespace awlsring.proxmox
 resource Node {
     identifiers: { node: NodeName },
     list: ListNodes,
-    resources: [ VirtualMachine, NetworkInterface ]
+    resources: [ VirtualMachine, NetworkInterface, Capabilities, Disks ]
     operations: [ ApplyNetworkInterfaceConfiguration, RevertNetworkInterfaceConfiguration ]
 }
 
