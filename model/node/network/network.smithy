@@ -7,8 +7,11 @@ resource NetworkInterface {
         node: NodeName, 
         interface: NetworkInterfaceIdentifier
     },
+    read: GetNetworkInterface,
     list: ListNetworkInterfaces,
     create: CreateNetworkInterface,
+    update: UpdateNetworkInterface,
+    delete: DeleteNetworkInterface,
 }
 
 string NetworkInterfaceIdentifier
