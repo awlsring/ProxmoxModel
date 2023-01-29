@@ -3,8 +3,8 @@ namespace awlsring.proxmox
 resource CorosyncNode {
     identifiers: { node: NodeName },
     list: ListCorosyncNodes,
-    // create: AddCorosyncNode,
-    // delete: RemoveCorosyncNode
+    delete: RemoveCorosyncNode
+    operations: [ AddCorosyncNode ]
 }
 
 structure CorosyncNodeSummary {
