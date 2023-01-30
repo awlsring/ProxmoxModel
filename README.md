@@ -5,3 +5,55 @@ This is an attempt to model the Proxmox API to allow for easier client generatio
 The api is very large so this has a long way to go.
 
 To do some manual testing, I'm using a workflow to generate and publish a go client. This can be found [at my proxmox-go repo](https://github.com/awlsring/proxmox-go)
+
+## Progress
+
+This is a tracker of what resources have been implemented and what is left to do.
+
+- [ ] access
+    - [ ] acl
+    - [ ] domains
+    - [ ] groups
+    - [ ] roles
+    - [ ] sso
+    - [ ] ticket
+    - [ ] users
+
+- [ ] cluster
+    - [ ] acme
+    - [ ] backup
+    - [x] config
+    - [ ] ha
+    - [ ] ha-manager
+    - [ ] ha-resources
+    - [ ] ha-status
+    - [ ] ha-vote
+    - [ ] log
+    - [ ] options
+    - [ ] resources
+    - [ ] status
+    - [ ] tasks
+    - [ ] upgrade
+    - [ ] version
+
+- [~] nodes
+    - [ ] apt
+    - [x] capabilities
+    - [ ] ceph
+    - [ ] certificates
+    - [x] disks
+    - [ ] firewall
+    - [ ] hardware
+    - [ ] lxc
+    - [x] network
+    - [~] qemu
+    - [ ] replication
+    - [ ] scan
+    - [ ] sdn
+    - [ ] services
+    - [ ] storage
+    - [ ] tasks
+    - [ ] vzdump
+
+- [ ] pools
+- [~] storage

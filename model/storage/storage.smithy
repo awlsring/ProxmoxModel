@@ -5,6 +5,7 @@ namespace awlsring.proxmox
 resource Storage {
     identifiers: { storage: StorageName },
     list: ListStorage,
+    delete: DeleteStorage,
 }
 
 @pattern("^[A-Za-z]+$")
