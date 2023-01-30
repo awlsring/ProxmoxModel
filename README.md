@@ -35,10 +35,10 @@ This is a tracker of what resources have been implemented and what is left to do
     - [x] apt
     - [x] capabilities
     - [ ] ceph
-    - [ ] certificates
+    - [x] certificates
     - [x] disks
     - [ ] firewall
-    - [ ] hardware
+    - [x] hardware
     - [ ] lxc
     - [x] network
     - [ ] qemu  (in progress)

@@ -5,8 +5,19 @@ namespace awlsring.proxmox
 resource Node {
     identifiers: { node: NodeName },
     list: ListNodes,
-    resources: [ VirtualMachine, NetworkInterface, Capabilities, Disks, Apt ]
-    operations: [ ApplyNetworkInterfaceConfiguration, RevertNetworkInterfaceConfiguration ]
+    resources: [ 
+        VirtualMachine,
+        NetworkInterface,
+        Capabilities,
+        Disks,
+        Apt,
+        Certificate,
+        Hardware,
+    ],
+    operations: [ 
+        ApplyNetworkInterfaceConfiguration, 
+        RevertNetworkInterfaceConfiguration 
+    ]
 }
 
 @pattern("^[A-Za-z]+$")
