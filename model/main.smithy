@@ -6,6 +6,7 @@ use aws.protocols#restJson1
 @title("Proxmox")
 
 @restJson1
+@httpBasicAuth
 @httpApiKeyAuth(scheme: "ApiKey", name: "Authorization", in: "header")
 @paginated(
     inputToken: "nextToken",
@@ -14,6 +15,6 @@ use aws.protocols#restJson1
 )
 service Proxmox {
     version: "2023-01-01",
-    resources: [ Node, Storage, Access, Cluster ],
+    resources: [ Node, Storage, Access, Cluster, Pool ],
     operations: [ GetVersion ]
 }
