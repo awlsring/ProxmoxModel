@@ -6,6 +6,7 @@ resource Disks {
     identifiers: {
         node: NodeName
     },
+    resources: [ Directory, LVM, LVMThin, ZFS ],
     operations: [ ListDisks, GetSmartHealth, WipeDisk, InitializeGPT ]
 }
 
