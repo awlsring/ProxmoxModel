@@ -10,13 +10,13 @@ To do some manual testing, I'm using a workflow to generate and publish a go cli
 
 This is a tracker of what resources have been implemented and what is left to do.
 
-- [ ] access
-    - [ ] acl
+- [ ] access (in progress)
     - [ ] domains
     - [ ] groups
     - [ ] roles
-    - [ ] sso
-    - [ ] ticket
+    - [ ] openid
+    - [ ] roles
+    - [ ] tfa
     - [ ] users
 
 - [ ] cluster
@@ -36,7 +36,7 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] upgrade
     - [ ] version
 
-- [~] nodes
+- [ ] nodes (in progress)
     - [ ] apt
     - [x] capabilities
     - [ ] ceph
@@ -46,7 +46,7 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] hardware
     - [ ] lxc
     - [x] network
-    - [~] qemu
+    - [ ] qemu  (in progress)
     - [ ] replication
     - [ ] scan
     - [ ] sdn
@@ -56,4 +56,4 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] vzdump
 
 - [ ] pools
-- [~] storage
+- [x] storage

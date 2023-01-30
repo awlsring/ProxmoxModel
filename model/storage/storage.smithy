@@ -5,7 +5,10 @@ namespace awlsring.proxmox
 resource Storage {
     identifiers: { storage: StorageName },
     list: ListStorage,
+    update: ModifyStorage,
+    read: GetStorage,
     delete: DeleteStorage,
+    operations: [ CreateStorage ]
 }
 
 @pattern("^[A-Za-z]+$")
@@ -62,4 +65,32 @@ enum StorageType {
 
 list StorageSummaries {
     member: StorageSummary
+}
+
+enum StoragePreallocation {
+    OFF = "off",
+    FALLOCATE = "falloc",
+    FULL = "full",
+    METADATA = "metadata",
+}
+
+enum StorageSMBVersion {
+    DEFAULT = "default",
+    SMB_2 = "2.0",
+    SMB_3 = "3.0",
+    SMB_2_1 = "2.1",
+    SMB_3_11 = "3.11",
+}
+
+enum StorageTransport {
+    TCP = "tcp",
+    RDMA = "rdma",
+    UNIX = "unix",
+}
+
+structure StorageConfiguration {
+    @required
+    storage: StorageName
+    @required
+    type: StorageType
 }

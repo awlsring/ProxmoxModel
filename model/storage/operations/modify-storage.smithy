@@ -2,10 +2,11 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
-@http(method: "POST", uri: "/storage", code: 200)
-operation CreateStorage {
-    input: CreateStorageInput,
-    output: CreateStorageOutput,
+@idempotent
+@http(method: "PUT", uri: "/storage/{storage}", code: 200)
+operation ModifyStorage {
+    input: ModifyStorageInput,
+    output: ModifyStorageOutput,
     errors: [
         InvalidInputError,
         InternalServerError
@@ -13,18 +14,10 @@ operation CreateStorage {
 }
 
 @input
-structure CreateStorageInput {
+structure ModifyStorageInput {
     @required
+    @httpLabel
     storage: StorageName
-
-    @required
-    type: StorageType
-
-    @jsonName("authsupported")
-    authSupported: String
-
-    @documentation("The base volume to use. ")
-    base: String
 
     @jsonName("blocksize")
     blockSize: String
@@ -45,6 +38,12 @@ structure CreateStorageInput {
     @documentation("Data pool, only for erasure coding")
     dataPool: String
 
+    @documentation("A list of settings to delete.")
+    delete: String
+
+    @documentation("Prevent change if current configuration has a different SHA1 digest.")
+    digest: String
+
     @jsonName("disable")
     @documentation("Disable the storage")
     disabled: Boolean
@@ -56,9 +55,6 @@ structure CreateStorageInput {
     @jsonName("encryption-key")
     @documentation("Encryption key for storage. Use 'autogen' to generate one automatically without passphrase.")
     encryptionKey: String
-
-    @documentation("NFS export path")
-    export: String
 
     @documentation("Certificate SHA256 fingerprint")
     fingerprint: String
@@ -78,10 +74,6 @@ structure CreateStorageInput {
     @jsonName("is_mountpoint")
     isMountPoint: String
 
-    @documentation("iSCSI provider")
-    @jsonName("iscsiprovider")
-    iscsiProvider: String
-
     @documentation("Client keyring contents")
     keyring: String
 
@@ -99,6 +91,10 @@ structure CreateStorageInput {
     @documentation("Mac number of protected backups. Defaults to unlimited")
     @jsonName("max-protected-backups")
     maxProtectedBackups: Integer
+
+    @documentation("Maximum number of files.")
+    @jsonName("maxfiles")
+    maxFiles: Integer
 
     @documentation("Create the directory if doesnt exist. Defaults to true.")
     @jsonName("mkdir")
@@ -133,17 +129,11 @@ structure CreateStorageInput {
     @documentation("Password for accessing the datastore")
     password: String
 
-    @documentation("The filesystem path")
-    path: String
-
     @documentation("The pool name")
     pool: String
 
     @documentation("For non default port")
     port: Integer
-
-    @documentation("iSCSI portal (IP or DNS name with optional port).")
-    portal: String
 
     @documentation("Preallocation mode for raw and qcow images.")
     @jsonName("preallocation")
@@ -168,9 +158,6 @@ structure CreateStorageInput {
     @jsonName("server2")
     backupServer: String
 
-    @documentation("The CIFS share.")
-    share: String
-
     @documentation("Indicates if the storage is shared.")
     @jsonName("shared")
     isShared: Boolean
@@ -191,28 +178,16 @@ structure CreateStorageInput {
     @jsonName("tagged_only")
     useTaggedOnly: Boolean
 
-    @documentation("LVM thin pool name.")
-    @jsonName("thinpool")
-    thinPool: String
-
     @documentation("Gluster transport type.")
     @jsonName("transport")
     transport: StorageTransport
 
     @documentation("The username to use.")
     username: String
-
-    @documentation("The volume group name.")
-    @jsonName("vgname")
-    volumeGroupName: String
-
-    @documentation("The glusterfs volume.")
-    @jsonName("volume")
-    volumeName: String
 }
 
 @output
-structure CreateStorageOutput {
+structure ModifyStorageOutput {
     @required
     @jsonName("data")
     configuration: StorageConfiguration
