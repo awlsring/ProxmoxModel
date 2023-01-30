@@ -22,19 +22,14 @@ This is a tracker of what resources have been implemented and what is left to do
 - [ ] cluster
     - [ ] acme
     - [ ] backup
+    - [ ] backup-info
     - [x] config
+    - [ ] firewall
     - [ ] ha
-    - [ ] ha-manager
-    - [ ] ha-resources
-    - [ ] ha-status
-    - [ ] ha-vote
-    - [ ] log
-    - [ ] options
-    - [ ] resources
-    - [ ] status
-    - [ ] tasks
-    - [ ] upgrade
-    - [ ] version
+    - [ ] jobs
+    - [ ] metrics
+    - [ ] replication
+    - [ ] sdn
 
 - [ ] nodes (in progress)
     - [ ] apt
@@ -54,6 +49,6 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] storage
     - [ ] tasks
     - [ ] vzdump
-
-- [ ] pools
+    
+- [x] pools
 - [x] storage
