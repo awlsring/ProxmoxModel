@@ -6,5 +6,9 @@ list StringList {
     member: String
 }
 
+list IntegerList {
+    member: Integer
+}
+
 @pattern("^[a-fA-F0-9-]+$")
 string UUID

@@ -32,7 +32,7 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] sdn
 
 - [ ] nodes (in progress)
-    - [ ] apt
+    - [x] apt
     - [x] capabilities
     - [ ] ceph
     - [ ] certificates
@@ -49,6 +49,6 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] storage
     - [ ] tasks
     - [ ] vzdump
-    
+
 - [x] pools
 - [x] storage
