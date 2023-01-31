@@ -9,7 +9,8 @@ resource VirtualMachine {
     },
     list: ListVirtualMachines,
     operations: [
-        GetVirtualMachineStatus
+        GetVirtualMachineStatus,
+        GetVirtualMachineConfiguration
     ]
 }
 
