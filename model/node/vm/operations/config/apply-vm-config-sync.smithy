@@ -2,12 +2,11 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
-@documentation("Get the virtual machine configuration with pending configuration changes applied. Using the 'current' parameter will pass the current configuration.")
-@readonly
-@http(method: "GET", uri: "/nodes/{node}/qemu/{vmId}/config", code: 200)
-operation GetVirtualMachineConfiguration {
-    input: GetVirtualMachineConfigurationInput,
-    output: GetVirtualMachineConfigurationOutput,
+@documentation("Set the virtual machine configuration synchronously.")
+@idempotent
+@http(method: "PUT", uri: "/nodes/{node}/qemu/{vmId}/config", code: 200)
+operation ApplyVirtualMachineConfigurationSync {
+    input: ApplyVirtualMachineConfigurationSyncInput,
     errors: [
         InvalidInputError,
         InternalServerError
@@ -15,7 +14,7 @@ operation GetVirtualMachineConfiguration {
 }
 
 @input
-structure GetVirtualMachineConfigurationInput {
+structure ApplyVirtualMachineConfigurationSyncInput {
     @required
     @httpLabel
     node: NodeName
@@ -24,30 +23,6 @@ structure GetVirtualMachineConfigurationInput {
     @httpLabel
     @jsonName("vmid")
     vmId: VirtualMachineIdentifier
-
-    @documentation("If specified, the configuration returned will be the current configuration. Otherwise, the configuration returned will be the pending configuration.")
-    @jsonName("current")
-    @httpQuery("current")
-    current: BooleanInteger
-
-    @jsonName("snapshot")
-    @httpQuery("snapshot")
-    @documentation("Fetch the configuration from the specified snapshot.")
-    snapshot: String
-}
-
-@output
-structure GetVirtualMachineConfigurationOutput {
-    @required
-    @jsonName("data")
-    configuration: VirtualMachineConfigurationSummary
-}
-
-@documentation("The virtual machine configuration.")
-structure VirtualMachineConfigurationSummary {
-    @required
-    @documentation("SHA1 digest of the current configuration.")
-    digest: String
 
     @jsonName("acpi")
     @documentation("Enable ACPI support. Default to enabled.")
@@ -90,7 +65,7 @@ structure VirtualMachineConfigurationSummary {
     bootDisk: String
 
     @jsonName("meta")
-    @documentation("The meta data of the virtual machine.")
+    @documentation("The metadata of the virtual machine.")
     meta: String
 
     @jsonName("cdrom")
@@ -136,6 +111,10 @@ structure VirtualMachineConfigurationSummary {
     @jsonName("description")
     @documentation("The description of the virtual machine.")
     description: String
+
+    @jsonName("digest")
+    @documentation("The SHA1 digest of the virtual machine configuration. This can prevent concurrent modifications of the virtual machine configuration.")
+    digest: String
 
     @jsonName("efidisk0")
     @documentation("The EFI disk device and its configuration.")

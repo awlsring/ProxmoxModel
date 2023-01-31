@@ -11,6 +11,8 @@ resource VirtualMachine {
     operations: [
         GetVirtualMachineStatus,
         GetVirtualMachineConfiguration
+        ApplyVirtualMachineConfigurationAsync,
+        ApplyVirtualMachineConfigurationSync,
     ]
 }
 

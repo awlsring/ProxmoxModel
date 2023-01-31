@@ -42,6 +42,11 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] lxc
     - [x] network
     - [ ] qemu  (in progress)
+        - [ ] agent
+        - [ ] cloudinit
+        - [ ] firewall
+        - [ ] snapshot
+        - [ ] status (in progress)
     - [ ] replication
     - [ ] scan
     - [ ] sdn
