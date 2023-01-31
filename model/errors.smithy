@@ -22,3 +22,10 @@ structure InternalServerError {
     @required
     message: String
 }
+
+@error("server")
+@httpError(500)
+structure NoGuestAgentError {
+    @required
+    message: String
+}

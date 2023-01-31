@@ -23,7 +23,12 @@ resource VirtualMachine {
         ApplyVirtualMachineConfigurationAsync,
         ApplyVirtualMachineConfigurationSync,
         CloneVirtualMachine,
-        GetVirtualMachineFeatureSupport
+        GetVirtualMachineFeatureSupport,
+        GetVirtualMachineFileSystemInformation,
+        GetVirtualMachineHostname,
+        GetVirtualMachineMemoryBlockInformation,
+        GetVirtualMachineMemoryBlocks,
+        GetVirtualMachineOperatingSystemInformation
     ]
 }
 
