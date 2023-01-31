@@ -119,7 +119,7 @@ structure VirtualMachineConfigurationSummary {
 
     @jsonName("bios")
     @documentation("The BIOS type.")
-    bios: String
+    bios: VirtualMachineBios
 
     @jsonName("cpu")
     @documentation("The CPU type.")

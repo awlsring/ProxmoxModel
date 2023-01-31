@@ -23,6 +23,10 @@ resource Node {
 @pattern("^[A-Za-z]+$")
 string NodeIdentifier
 
+list NodeIdentifiers {
+    member: NodeIdentifier
+}
+
 structure NodeSummary {
     @required
     @documentation("The name of the node")

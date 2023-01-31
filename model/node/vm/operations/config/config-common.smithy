@@ -2,6 +2,11 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
+enum VirtualMachineBios {
+    SEABIOS = "seabios"
+    OVMF = "ovmf"
+}
+
 enum VirtualMachineArchitecture {
     @documentation("x86_64")
     X86_64,

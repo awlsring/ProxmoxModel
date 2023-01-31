@@ -7,13 +7,16 @@ resource VirtualMachine {
         node: NodeIdentifier,
         vmId: VirtualMachineIdentifier
     },
+    delete: DeleteVirtualMachine,
     list: ListVirtualMachines,
     operations: [
+        CreateVirtualMachine,
         GetVirtualMachineStatus,
         GetVirtualMachineConfiguration
         ApplyVirtualMachineConfigurationAsync,
         ApplyVirtualMachineConfigurationSync,
         CloneVirtualMachine,
+        GetVirtualMachineFeatureSupport
     ]
 }
 

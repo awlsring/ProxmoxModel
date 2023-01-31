@@ -49,7 +49,7 @@ structure ApplyVirtualMachineConfigurationAsyncInput {
     audio: String
 
     @jsonName("autostart")
-    @documentation("Start the virtual machine on node boot.")
+    @documentation("Start the virtual machine on crash.")
     autostart: BooleanInteger
 
     @jsonName("ballon")
@@ -60,13 +60,13 @@ structure ApplyVirtualMachineConfigurationAsyncInput {
     @documentation("The boot order of the virtual machine.")
     boot: String
 
+    @jsonName("bios")
+    @documentation("The BIOS type.")
+    bios: VirtualMachineBios
+
     @jsonName("bootdisk")
     @documentation("The boot disk of the virtual machine.")
     bootDisk: String
-
-    @jsonName("meta")
-    @documentation("The metadata of the virtual machine.")
-    meta: String
 
     @jsonName("cdrom")
     @documentation("The CD-ROM device and its configuration. An alias for option ide2") // probably not include this then...
@@ -92,10 +92,6 @@ structure ApplyVirtualMachineConfigurationAsyncInput {
     @documentation("Number of cores per socket.")
     cores: Integer
 
-    @jsonName("bios")
-    @documentation("The BIOS type.")
-    bios: String
-
     @jsonName("cpu")
     @documentation("The CPU type.")
     cpu: String
@@ -115,6 +111,10 @@ structure ApplyVirtualMachineConfigurationAsyncInput {
     @jsonName("digest")
     @documentation("The SHA1 digest of the virtual machine configuration. This can prevent concurrent modifications of the virtual machine configuration.")
     digest: String
+
+    @jsonName("delete")
+    @documentation("A list of settings to delete from the configuration.")
+    delete: String
 
     @jsonName("efidisk0")
     @documentation("The EFI disk device and its configuration.")

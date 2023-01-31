@@ -2,11 +2,11 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
-@documentation("Set the virtual machine configuration synchronously.")
-@idempotent
-@http(method: "PUT", uri: "/nodes/{node}/qemu/{vmId}/config", code: 200)
-operation ApplyVirtualMachineConfigurationSync {
-    input: ApplyVirtualMachineConfigurationSyncInput,
+@documentation("Create a new virtual machine.")
+@http(method: "POST", uri: "/nodes/{node}/qemu", code: 200)
+operation CreateVirtualMachine {
+    input: CreateVirtualMachineInput,
+    output: CreateVirtualMachineOutput,
     errors: [
         InvalidInputError,
         InternalServerError
@@ -14,13 +14,12 @@ operation ApplyVirtualMachineConfigurationSync {
 }
 
 @input
-structure ApplyVirtualMachineConfigurationSyncInput {
+structure CreateVirtualMachineInput {
     @required
     @httpLabel
     node: NodeIdentifier
 
     @required
-    @httpLabel
     @jsonName("vmid")
     vmId: VirtualMachineIdentifier
 
@@ -35,6 +34,10 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @jsonName("agent")
     @documentation("The QEMU agent and its configuration.")
     agent: String
+
+    @jsonName("archive")
+    @documentation("The archive of the virtual machine.")
+    archive: String
 
     @jsonName("arch")
     @documentation("The architecture of the virtual machine.")
@@ -55,6 +58,10 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @jsonName("ballon")
     @documentation("Amount of RAM for the VM in MB.")
     ballon: Integer
+
+    @jsonName("bios")
+    @documentation("The BIOS type.")
+    bios: VirtualMachineBios
 
     @jsonName("boot")
     @documentation("The boot order of the virtual machine.")
@@ -88,10 +95,6 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @documentation("Number of cores per socket.")
     cores: Integer
 
-    @jsonName("bios")
-    @documentation("The BIOS type.")
-    bios: VirtualMachineBios
-
     @jsonName("cpu")
     @documentation("The CPU type.")
     cpu: String
@@ -111,10 +114,6 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @jsonName("digest")
     @documentation("The SHA1 digest of the virtual machine configuration. This can prevent concurrent modifications of the virtual machine configuration.")
     digest: String
-
-    @jsonName("delete")
-    @documentation("A list of settings to delete from the configuration.")
-    delete: String
 
     @jsonName("efidisk0")
     @documentation("The EFI disk device and its configuration.")
@@ -239,6 +238,10 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @jsonName("localtime")
     @documentation("Set the real time clock to local time.")
     localTime: BooleanInteger
+
+    @jsonName("live-restore")
+    @documentation("Start VM immediatly from backup and start in the background.")
+    liveRestore: BooleanInteger
 
     @jsonName("lock")
     @documentation("The lock type on the virtual machine.")
@@ -584,6 +587,10 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @documentation("Configure a disk for storing TPM state.")
     tpmState0: String
 
+    @jsonName("unqiue")
+    @documentation("Assign a unique random ehternet address.")
+    uniqueEthernetAddress: BooleanInteger
+
     @jsonName("usb0")
     @documentation("A usb device on the virtual machine.")
     usbDevice0: String
@@ -731,4 +738,11 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @jsonName("watchdog")
     @documentation("The watchdog device for the virtual machine.")
     watchdog: String
+}
+
+@output
+structure CreateVirtualMachineOutput {
+    @required
+    @jsonName("data")
+    result: String
 }
