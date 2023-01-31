@@ -5,18 +5,25 @@ namespace awlsring.proxmox
 resource VirtualMachine {
     identifiers: {
         node: NodeName,
-        vmId: VmId
+        vmId: VirtualMachineIdentifier
     },
     list: ListVirtualMachines,
+    operations: [
+        GetVirtualMachineStatus
+    ]
 }
 
-string VmId
+@documentation("The id of the virtual machine as a string")
+string VirtualMachineIdentifier
+
+@documentation("The id of the virtual machine as an integer")
+integer VirtualMachineIdentifierInteger
 
 structure VirtualMachineSummary {
     @required
     @jsonName("vmid")
     @documentation("The ID of the virtual machine. Unique across cluster")
-    Id: Integer,
+    Id: VirtualMachineIdentifierInteger,
 
     @jsonName("mem")
     @documentation("Current memory utilization in bytes")
@@ -61,7 +68,7 @@ structure VirtualMachineSummary {
 
     @jsonName("cpus")
     @documentation("Amount of CPU cores allocated to the virtual machine")
-    cores: Integer,
+    cpuCount: Integer,
 
     @documentation("PID of the qemu process on the host node")
     pid: Integer,

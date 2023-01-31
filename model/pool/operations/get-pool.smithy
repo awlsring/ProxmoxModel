@@ -68,7 +68,7 @@ structure PoolMember {
     cpuUtilization: Float,
 
     @jsonName("maxcpu")
-    cores: Integer,
+    cpuCount: Integer,
 
     @jsonName("vmid")
     vmId: Integer,
