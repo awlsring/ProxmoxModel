@@ -15,6 +15,9 @@ resource VirtualMachine {
         GetPendingVirtualMachineCloudInitChanges,
         GetVirtualMachineCloudInit,
         RegenerateVirtualMachineCloudInit,
+        ResizeVirtualMachineDisk,
+        UnlinkVirtualMachineDisks,
+        ListPendingVirtualMachineConfigurationChanges,
         GetVirtualMachineStatus,
         GetVirtualMachineConfiguration
         ApplyVirtualMachineConfigurationAsync,
