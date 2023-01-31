@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource Certificate {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     }
     operations: [
         ListNodeCertificates,

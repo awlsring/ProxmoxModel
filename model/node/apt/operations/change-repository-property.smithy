@@ -15,7 +15,7 @@ operation ChangeRepositoryProperties {
 structure ChangeRepositoryPropertiesInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @required
     @httpQuery("path")

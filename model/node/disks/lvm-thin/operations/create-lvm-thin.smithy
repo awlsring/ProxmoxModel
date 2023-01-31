@@ -17,7 +17,7 @@ operation CreateLVMThin {
 structure CreateLVMThinInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @documentation("The device to create the lvm thinpool on.")

@@ -17,7 +17,7 @@ operation GetPackageChangelog {
 structure GetPackageChangelogInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @httpQuery("name")
     @documentation("The name of the package to get the changelog for.")

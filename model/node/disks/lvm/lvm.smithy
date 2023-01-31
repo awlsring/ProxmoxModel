@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource LVM {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     operations: [ CreateLVM, ListLVMs, DeleteLVM ]
 }

@@ -18,7 +18,7 @@ operation ListLVMs {
 structure ListLVMsInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }
 
 @output

@@ -18,7 +18,7 @@ operation DeleteLVM {
 structure DeleteLVMInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

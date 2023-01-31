@@ -18,7 +18,7 @@ operation GetVirtualMachineConfiguration {
 structure GetVirtualMachineConfigurationInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

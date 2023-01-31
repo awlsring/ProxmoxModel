@@ -18,7 +18,7 @@ operation DeleteZFSPool {
 structure DeleteZFSPoolInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

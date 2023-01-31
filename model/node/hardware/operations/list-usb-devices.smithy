@@ -17,7 +17,7 @@ operation ListUsbDevices {
 structure ListUsbDevicesInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }
 
 @output

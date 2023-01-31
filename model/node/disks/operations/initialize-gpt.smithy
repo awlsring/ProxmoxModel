@@ -17,7 +17,7 @@ operation InitializeGPT {
 structure InitializeGPTInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @documentation("Disk to initialize.")
     disk: DevicePath,

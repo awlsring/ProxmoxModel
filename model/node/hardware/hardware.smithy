@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource Hardware {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     operations: [
         ListUsbDevices,

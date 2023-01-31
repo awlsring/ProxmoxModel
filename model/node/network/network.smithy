@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource NetworkInterface {
     identifiers: { 
-        node: NodeName, 
+        node: NodeIdentifier, 
         interface: NetworkInterfaceIdentifier
     },
     read: GetNetworkInterface,

@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource ZFS {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     operations: [ CreateZFSPool, ListZFSPools, DeleteZFSPool, GetZFSPoolStatus ]
 }

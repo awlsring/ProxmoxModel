@@ -16,7 +16,7 @@ operation UpdateNetworkInterface {
 structure UpdateNetworkInterfaceInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

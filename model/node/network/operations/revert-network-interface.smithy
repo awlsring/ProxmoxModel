@@ -16,5 +16,5 @@ operation RevertNetworkInterfaceConfiguration {
 structure RevertNetworkInterfaceConfigurationInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }

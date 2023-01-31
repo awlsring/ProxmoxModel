@@ -17,7 +17,7 @@ operation ListRepositoriesInformation {
 structure ListRepositoriesInformationInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 }
 
 @output

@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource VirtualMachine {
     identifiers: {
-        node: NodeName,
+        node: NodeIdentifier,
         vmId: VirtualMachineIdentifier
     },
     list: ListVirtualMachines,
@@ -13,6 +13,7 @@ resource VirtualMachine {
         GetVirtualMachineConfiguration
         ApplyVirtualMachineConfigurationAsync,
         ApplyVirtualMachineConfigurationSync,
+        CloneVirtualMachine,
     ]
 }
 

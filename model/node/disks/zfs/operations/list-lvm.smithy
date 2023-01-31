@@ -18,7 +18,7 @@ operation ListZFSPools {
 structure ListZFSPoolsInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }
 
 @output

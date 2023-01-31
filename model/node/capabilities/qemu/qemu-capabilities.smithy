@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource QemuCapability {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     }
     operations: [ ListCpuCapabilities, ListMachineCapabilities ]
 }

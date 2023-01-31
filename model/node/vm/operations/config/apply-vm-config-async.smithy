@@ -17,7 +17,7 @@ operation ApplyVirtualMachineConfigurationAsync {
 structure ApplyVirtualMachineConfigurationAsyncInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

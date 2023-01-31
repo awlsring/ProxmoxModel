@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource Apt {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     }
     operations: [
         GetPackageChangelog,

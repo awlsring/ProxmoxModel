@@ -18,7 +18,7 @@ operation ListNodeCertificates {
 structure ListNodeCertificatesInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 }
 
 @output

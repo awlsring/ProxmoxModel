@@ -16,7 +16,7 @@ operation AddCorosyncNode {
 structure AddCorosyncNodeInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @documentation("The api version on the new node")
     @jsonName("apiversion")

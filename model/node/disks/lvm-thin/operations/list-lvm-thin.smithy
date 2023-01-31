@@ -18,7 +18,7 @@ operation ListLVMThins {
 structure ListLVMThinsInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }
 
 @output

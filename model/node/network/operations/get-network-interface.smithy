@@ -17,7 +17,7 @@ operation GetNetworkInterface {
 structure GetNetworkInterfaceInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

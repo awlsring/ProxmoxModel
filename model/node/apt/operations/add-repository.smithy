@@ -16,7 +16,7 @@ operation AddRepository {
 structure AddRepositoryInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @required
     @httpQuery("handle")

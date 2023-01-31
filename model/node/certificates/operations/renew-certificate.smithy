@@ -18,7 +18,7 @@ operation RenewNodeCertificate {
 structure RenewNodeCertificateInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @documentation("Force renewal even if expirary is more than 30 days away.")
     force: BooleanInteger

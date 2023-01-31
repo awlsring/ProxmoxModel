@@ -18,7 +18,7 @@ operation AddCustomNodeCertificate {
 structure AddCustomNodeCertificateInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @required
     @jsonName("certificates")

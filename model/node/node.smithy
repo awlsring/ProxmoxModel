@@ -3,7 +3,7 @@ $version: "2.0"
 namespace awlsring.proxmox
 
 resource Node {
-    identifiers: { node: NodeName },
+    identifiers: { node: NodeIdentifier },
     list: ListNodes,
     resources: [ 
         VirtualMachine,
@@ -21,12 +21,12 @@ resource Node {
 }
 
 @pattern("^[A-Za-z]+$")
-string NodeName
+string NodeIdentifier
 
 structure NodeSummary {
     @required
     @documentation("The name of the node")
-    node: NodeName,
+    node: NodeIdentifier,
 
     @jsonName("maxmem")
     @documentation("Max memory allocated in bytes")

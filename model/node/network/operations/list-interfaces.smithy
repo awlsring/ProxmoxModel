@@ -17,7 +17,7 @@ operation ListNetworkInterfaces {
 structure ListNetworkInterfacesInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @httpQuery("type")
     type: NetworkInterfaceType

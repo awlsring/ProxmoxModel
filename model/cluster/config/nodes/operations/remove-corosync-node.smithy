@@ -16,5 +16,5 @@ operation RemoveCorosyncNode {
 structure RemoveCorosyncNodeInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }

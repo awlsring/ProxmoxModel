@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource LVMThin {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     operations: [ CreateLVMThin, ListLVMThins, DeleteLVMThin ]
 }

@@ -83,7 +83,7 @@ structure PoolMember {
     isTemplate: Integer
 
     @jsonName("node")
-    node: NodeName,
+    node: NodeIdentifier,
 
     type: PoolMemberType,
 

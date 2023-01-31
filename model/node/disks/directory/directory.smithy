@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource Directory {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     operations: [ CreateDirectory, ListDirectories, DeleteDirectory ]
 }

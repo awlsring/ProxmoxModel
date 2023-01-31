@@ -4,7 +4,7 @@ namespace awlsring.proxmox
 
 resource Disks {
     identifiers: {
-        node: NodeName
+        node: NodeIdentifier
     },
     resources: [ Directory, LVM, LVMThin, ZFS ],
     operations: [ ListDisks, GetSmartHealth, WipeDisk, InitializeGPT ]

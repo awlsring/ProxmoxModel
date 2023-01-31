@@ -17,7 +17,7 @@ operation ModifyStorage {
 structure ModifyStorageInput {
     @required
     @httpLabel
-    storage: StorageName
+    storage: StorageIdentifier
 
     @jsonName("blocksize")
     blockSize: String

@@ -17,7 +17,7 @@ operation CreateDirectory {
 structure CreateDirectoryInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @documentation("The device to create the directory on.")

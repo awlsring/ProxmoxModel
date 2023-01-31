@@ -3,7 +3,7 @@ $version: "2.0"
 namespace awlsring.proxmox
 
 resource Storage {
-    identifiers: { storage: StorageName },
+    identifiers: { storage: StorageIdentifier },
     list: ListStorage,
     update: ModifyStorage,
     read: GetStorage,
@@ -12,12 +12,12 @@ resource Storage {
 }
 
 @pattern("^[A-Za-z]+$")
-string StorageName
+string StorageIdentifier
 
 structure StorageSummary {
     @required
     @documentation("The storage class name")
-    storage: StorageName,
+    storage: StorageIdentifier,
 
     @documentation("Comma seperated list of content types in storage. Returned as a string")
     content: String,
@@ -90,7 +90,7 @@ enum StorageTransport {
 
 structure StorageConfiguration {
     @required
-    storage: StorageName
+    storage: StorageIdentifier
     @required
     type: StorageType
 }

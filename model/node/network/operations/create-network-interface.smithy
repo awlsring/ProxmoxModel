@@ -15,7 +15,7 @@ operation CreateNetworkInterface {
 structure CreateNetworkInterfaceInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @jsonName("iface")

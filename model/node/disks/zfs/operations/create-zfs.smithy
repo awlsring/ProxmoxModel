@@ -17,7 +17,7 @@ operation CreateZFSPool {
 structure CreateZFSPoolInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @documentation("The devices to create the zfs pool on. This is a comma seperated list sent as a string.")

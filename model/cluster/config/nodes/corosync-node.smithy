@@ -1,7 +1,7 @@
 namespace awlsring.proxmox
 
 resource CorosyncNode {
-    identifiers: { node: NodeName },
+    identifiers: { node: NodeIdentifier },
     list: ListCorosyncNodes,
     delete: RemoveCorosyncNode
     operations: [ AddCorosyncNode ]
@@ -43,7 +43,7 @@ structure CorosyncNodeSummary {
 
     @required
     @jsonName("name")
-    name: NodeName
+    name: NodeIdentifier
 
     @jsonName("pve_addr")
     pveAddress: String

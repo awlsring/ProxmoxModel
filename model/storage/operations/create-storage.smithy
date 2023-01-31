@@ -15,7 +15,7 @@ operation CreateStorage {
 @input
 structure CreateStorageInput {
     @required
-    storage: StorageName
+    storage: StorageIdentifier
 
     @required
     type: StorageType

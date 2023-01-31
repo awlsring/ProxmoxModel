@@ -17,7 +17,7 @@ operation OrderNodeCertificate {
 structure OrderNodeCertificateInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @documentation("Overwrite existing custom certificate.")
     force: BooleanInteger

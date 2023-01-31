@@ -17,7 +17,7 @@ operation WipeDisk {
 structure WipeDiskInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @httpQuery("disk")
     @documentation("Disk to wipe.")

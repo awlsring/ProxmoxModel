@@ -17,7 +17,7 @@ operation ListPciDevices {
 structure ListPciDevicesInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @httpQuery("pci-class-blacklist")
     @documentation("Comma seperated list of PCI class IDs to exclude from the list")

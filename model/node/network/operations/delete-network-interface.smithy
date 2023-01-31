@@ -16,7 +16,7 @@ operation DeleteNetworkInterface {
 structure DeleteNetworkInterfaceInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel

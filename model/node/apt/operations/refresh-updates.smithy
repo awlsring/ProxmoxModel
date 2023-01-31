@@ -16,7 +16,7 @@ operation RefreshUpdates {
 structure RefreshUpdatesInput {
     @required
     @httpLabel
-    node: NodeName,
+    node: NodeIdentifier,
 
     @httpQuery("notify")
     @documentation("Send a notification to the user. Ths is a boolean integer, 0 or 1.")

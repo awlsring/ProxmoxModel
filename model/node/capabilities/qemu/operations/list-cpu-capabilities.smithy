@@ -18,7 +18,7 @@ operation ListCpuCapabilities {
 structure ListCpuCapabilitiesInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 }
 
 @output

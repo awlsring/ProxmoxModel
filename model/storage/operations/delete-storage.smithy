@@ -16,5 +16,5 @@ operation DeleteStorage {
 structure DeleteStorageInput {
     @required
     @httpLabel
-    storage: StorageName
+    storage: StorageIdentifier
 }

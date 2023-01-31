@@ -18,7 +18,7 @@ operation GetSmartHealth {
 structure GetSmartHealthInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @httpQuery("disk")
     @documentation("Disk to check.")

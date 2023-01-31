@@ -18,7 +18,7 @@ operation ListDisks {
 structure ListDisksInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @httpQuery("include-partitions")
     @documentation("Include partitions in response list. Takes a boolean integer value (0 false, 1 true).")

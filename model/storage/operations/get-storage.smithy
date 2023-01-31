@@ -17,7 +17,7 @@ operation GetStorage {
 structure GetStorageInput {
     @required
     @httpLabel
-    storage: StorageName
+    storage: StorageIdentifier
 }
 
 @output

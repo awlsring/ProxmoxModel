@@ -18,7 +18,7 @@ operation DeleteDirectory {
 structure DeleteDirectoryInput {
     @required
     @httpLabel
-    node: NodeName
+    node: NodeIdentifier
 
     @required
     @httpLabel
