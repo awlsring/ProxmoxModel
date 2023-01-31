@@ -11,6 +11,10 @@ resource VirtualMachine {
     list: ListVirtualMachines,
     operations: [
         CreateVirtualMachine,
+        CreateVirtualMachineTemplate,
+        GetPendingVirtualMachineCloudInitChanges,
+        GetVirtualMachineCloudInit,
+        RegenerateVirtualMachineCloudInit,
         GetVirtualMachineStatus,
         GetVirtualMachineConfiguration
         ApplyVirtualMachineConfigurationAsync,

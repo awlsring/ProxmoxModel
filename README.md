@@ -43,7 +43,7 @@ This is a tracker of what resources have been implemented and what is left to do
     - [x] network
     - [ ] qemu  (in progress)
         - [ ] agent
-        - [ ] cloudinit
+        - [x] cloudinit
         - [ ] firewall
         - [ ] snapshot
         - [ ] status (in progress)
