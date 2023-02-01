@@ -28,7 +28,8 @@ resource VirtualMachine {
         GetVirtualMachineHostname,
         GetVirtualMachineMemoryBlockInformation,
         GetVirtualMachineMemoryBlocks,
-        GetVirtualMachineOperatingSystemInformation
+        GetVirtualMachineOperatingSystemInformation,
+        GetVirtualMachineTime,
     ]
 }
 

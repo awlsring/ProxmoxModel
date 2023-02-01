@@ -25,10 +25,26 @@ jobs:
       with:
         repository: awlsring/proxmox-go
         token: ${{ secrets.GO_GITHUB_TOKEN }}
+    - name: ls
+      run: ls -la
     - name: Download client code
       uses: actions/download-artifact@v2
       with:
         name: client-code
+        path: /tmp/package
+    - name: ls
+      run: ls -la
+    - name: Remove junk and move client code
+      run: |
+        rm -rf proxmox/*
+        rm -rf api/*
+        rm -rf docs/*
+        mv /tmp/package/*.go proxmox/
+        mv /tmp/package/api/* api/
+        mv /tmp/package/docs/* docs/
+        go mod tidy
+    - name: ls
+      run: ls -la
     - name: Commit and push changes
       run: |
         git config --local user.email "actions@github.com"
