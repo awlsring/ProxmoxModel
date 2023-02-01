@@ -40,14 +40,14 @@ structure DiskSummary {
 
     serial: String
 
-    rpm: Integer
+    rpm: Document
 
     @jsonName("wwn")
     worldWideNumber: String
 
     vendor: String
 
-    wearout: Integer
+    wearout: Document
 
     type: DiskType
 
