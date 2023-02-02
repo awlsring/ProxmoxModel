@@ -21,6 +21,10 @@ structure NetworkInterfaceSummary {
     @jsonName("iface")
     interface: NetworkInterfaceIdentifier
 
+    @required
+    @jsonName("type")
+    interfaceType: NetworkInterfaceType
+
     @jsonName("method")
     ipAssignmentMethod: NetworkInterfaceMethod
 
