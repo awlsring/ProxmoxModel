@@ -30,6 +30,7 @@ resource VirtualMachine {
         GetVirtualMachineMemoryBlocks,
         GetVirtualMachineOperatingSystemInformation,
         GetVirtualMachineTime,
+        GetVirtualMachineTimeZone,
     ]
 }
 
