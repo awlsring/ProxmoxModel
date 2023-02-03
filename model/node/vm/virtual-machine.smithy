@@ -45,7 +45,14 @@ structure VirtualMachineSummary {
     @required
     @jsonName("vmid")
     @documentation("The ID of the virtual machine. Unique across cluster")
-    Id: VirtualMachineIdentifierInteger,
+    id: VirtualMachineIdentifierInteger,
+
+    @required
+    @documentation("The status of the virtual machine")
+    status: VirtualMachineStatus,
+
+    @jsonName("template")
+    isTemplate: BooleanInteger,
 
     @jsonName("mem")
     @documentation("Current memory utilization in bytes")
@@ -61,9 +68,6 @@ structure VirtualMachineSummary {
 
     @documentation("The name of the virtual machine")
     name: String,
-
-    @documentation("The status of the virtual machine")
-    status: VirtualMachineStatus,
 
     @documentation("The uptime of the virtual machine in seconds")
     uptime: Long,
