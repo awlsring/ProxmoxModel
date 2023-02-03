@@ -2,7 +2,7 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
-@documentation("Get the time of the virtual machine. Requries the guest agent to be installed and active.")
+@documentation("Get the time zone of the virtual machine. Requries the guest agent to be installed and active.")
 @readonly
 @http(method: "GET", uri: "/nodes/{node}/qemu/{vmId}/agent/get-timezone", code: 200)
 operation GetVirtualMachineTimeZone {
