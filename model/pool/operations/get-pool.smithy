@@ -28,18 +28,18 @@ structure GetPoolInput {
 structure GetPoolOutput {
     @required
     @jsonName("data")
-    pools: PoolInfoList
+    pools: PoolConfigurationSummary
 }
 
-structure PoolConfiguration {
+structure PoolConfigurationSummary {
     @required
     @jsonName("members")
-    poolMembers: PoolMembers,
+    poolMembers: PoolMemberSummaries,
 
     comment: String,
 }
 
-structure PoolMember {
+structure PoolMemberSummary {
     id: String
 
     disk: Integer,
@@ -88,10 +88,17 @@ structure PoolMember {
     type: PoolMemberType,
 
     status: String
+
+    @jsonName("plugintype")
+    pluginType: String
+
+    shared: BooleanInteger
+
+    content: String
 }
 
-list PoolMembers {
-    member: PoolMember
+list PoolMemberSummaries {
+    member: PoolMemberSummary
 }
 
 enum PoolMemberType {

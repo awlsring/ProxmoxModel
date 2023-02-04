@@ -16,10 +16,10 @@ operation ListPools {
 structure ListPoolsOutput {
     @required
     @jsonName("data")
-    pools: PoolInfoList
+    pools: PoolSummaries
 }
 
-structure PoolInfo {
+structure PoolSummary {
     @required
     @jsonName("poolid")
     poolId: PoolIdentifier,
@@ -27,6 +27,6 @@ structure PoolInfo {
     comment: String,
 }
 
-list PoolInfoList {
-    member: PoolInfo
+list PoolSummaries {
+    member: PoolSummary
 }
