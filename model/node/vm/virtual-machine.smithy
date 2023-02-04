@@ -32,6 +32,7 @@ resource VirtualMachine {
         GetVirtualMachineTime,
         GetVirtualMachineTimeZone,
         GetVirtualMachineVcpus,
+        GetVirtualMachineAgentInfo,
     ]
 }
 
