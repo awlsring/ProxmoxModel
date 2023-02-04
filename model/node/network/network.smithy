@@ -76,9 +76,19 @@ structure NetworkInterfaceSummary {
     @jsonName("address")
     ipv4Address: Ipv4Address
 
+    @jsonName("gateway")
+    ipv4Gateway: Ipv4Address
+
+    @jsonName("gateway6")
+    ipv6Gateway: Ipv6Address
+
     netmask: String
 
-    cidr: Ipv4AddressWithCIDR
+    @jsonName("cidr")
+    ipv4Cidr: Ipv4AddressWithCIDR
+
+    @jsonName("cidr6")
+    ipv6Cidr: String
 
     @jsonName("address6")
     ipv6Address: Ipv6Address
