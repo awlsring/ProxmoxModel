@@ -13,6 +13,7 @@ resource Node {
         Apt,
         Certificate,
         Hardware,
+        NodeStorage,
     ],
     operations: [ 
         ApplyNetworkInterfaceConfiguration, 
