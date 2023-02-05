@@ -33,6 +33,8 @@ structure StorageSummary {
     @documentation("The volume group name")
     vgName: String,
 
+    pool: String,
+
     @jsonName("path")
     @documentation("The storage path")
     path: String,
