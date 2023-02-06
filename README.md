@@ -17,7 +17,7 @@ This is a tracker of what resources have been implemented and what is left to do
     - [ ] openid
     - [ ] roles
     - [ ] tfa
-    - [ ] users
+    - [x] users
 
 - [ ] cluster
     - [ ] acme
