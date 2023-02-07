@@ -34,6 +34,7 @@ resource VirtualMachine {
         GetVirtualMachineVcpus,
         GetVirtualMachineAgentInfo,
         GetVirtualMachineNetworkInterfaces,
+        PingVirtualMachine
     ]
 }
 
