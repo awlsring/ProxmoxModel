@@ -3,7 +3,7 @@ $version: "2.0"
 namespace awlsring.proxmox
 
 @idempotent
-@http(method: "PUT", uri: "/pools", code: 200)
+@http(method: "PUT", uri: "/pools/{poolId}", code: 200)
 operation ModifyPool {
     input: ModifyPoolInput
     errors: [
@@ -15,6 +15,7 @@ operation ModifyPool {
 @input
 structure ModifyPoolInput {
     @required
+    @httpLabel
     @jsonName("poolid")
     poolId: PoolIdentifier,
 
