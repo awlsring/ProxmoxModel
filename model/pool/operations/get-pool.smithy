@@ -40,7 +40,11 @@ structure PoolConfigurationSummary {
 }
 
 structure PoolMemberSummary {
+    @required
     id: String
+
+    @required
+    type: PoolMemberType,
 
     disk: Integer,
     
@@ -84,8 +88,6 @@ structure PoolMemberSummary {
 
     @jsonName("node")
     node: NodeIdentifier,
-
-    type: PoolMemberType,
 
     status: String
 
