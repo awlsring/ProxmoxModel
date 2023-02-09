@@ -89,6 +89,8 @@ structure PoolMemberSummary {
     @jsonName("node")
     node: NodeIdentifier,
 
+    storage: StorageIdentifier,
+
     status: String
 
     @jsonName("plugintype")
