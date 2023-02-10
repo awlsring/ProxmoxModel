@@ -90,7 +90,7 @@ structure CreateNetworkInterfaceInput {
     ovsBridge: String
 
     @jsonName("slaves")
-    interfaces: StringList
+    interfaces: String
 
     @jsonName("vlan-id")
     vlanId: Integer
