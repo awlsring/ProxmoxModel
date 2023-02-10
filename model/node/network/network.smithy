@@ -37,6 +37,9 @@ structure NetworkInterfaceSummary {
     @jsonName("families")
     families: StringList
 
+    @jsonName("bond_primary")
+    bondPrimary: NetworkInterfaceIdentifier
+
     @jsonName("bond_mode")
     bondMode: NetworkInterfaceBondMode
 
