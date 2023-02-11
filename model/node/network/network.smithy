@@ -55,6 +55,9 @@ structure NetworkInterfaceSummary {
     @jsonName("autostart")
     autoStart: Integer
 
+    @jsonName("comments")
+    comments: String
+
     @jsonName("active")
     isActive: Integer
 
