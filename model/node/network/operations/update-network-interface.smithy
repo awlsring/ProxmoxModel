@@ -74,7 +74,7 @@ structure UpdateNetworkInterfaceInput {
     ipv4Netmask: Ipv4Address
 
     @jsonName("netmask6")
-    ipv6Netmask: Integer
+    ipv6Netmask: String
 
     @jsonName("ovs_bonds")
     ovsBonds: String
