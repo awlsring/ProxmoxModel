@@ -7,6 +7,28 @@ resource Realm {
     list: ListRealms
     delete: DeleteRealm
     read: GetRealm
+    operations: [ CreateRealm ]
 }
 
 string RealmIdentifier
+
+enum RealmType {
+    AD = "ad",
+    LDAP = "ldap",
+    PAM = "pam",
+    PVE = "pve",
+    OPEN_ID = "openid",
+}
+
+enum RealmMode {
+    LDAP = "ldap",
+    LDAPS = "ldaps",
+    LDAP_START_TLS = "ldap+starttls",
+}
+
+enum RealmSslVersion {
+    TLSV1 = "tlsv1",
+    TLSV1_1 = "tlsv1_1",
+    TLSV1_2 = "tlsv1_2",
+    TLSV1_3 = "tlsv1_3",
+}
