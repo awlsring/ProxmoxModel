@@ -7,7 +7,11 @@ resource Realm {
     list: ListRealms
     delete: DeleteRealm
     read: GetRealm
-    operations: [ CreateRealm ]
+    update: UpdateRealm
+    operations: [ 
+        CreateRealm,
+        SyncRealm
+    ]
 }
 
 string RealmIdentifier

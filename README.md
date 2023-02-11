@@ -11,7 +11,7 @@ To do some manual testing, I'm using a workflow to generate and publish a go cli
 This is a tracker of what resources have been implemented and what is left to do.
 
 - [ ] access (in progress)
-    - [ ] domains
+    - [x] domains
     - [ ] groups
     - [ ] roles
     - [ ] openid

@@ -2,9 +2,10 @@ $version: "2.0"
 
 namespace awlsring.proxmox
 
-@http(method: "POST", uri: "/access/domains", code: 200)
-operation CreateRealm {
-    input: CreateRealmInput,
+@idempotent
+@http(method: "PUT", uri: "/access/domains/{realm}", code: 200)
+operation UpdateRealm {
+    input: UpdateRealmInput,
     errors: [
         InvalidInputError,
         InternalServerError
@@ -12,17 +13,11 @@ operation CreateRealm {
 }
 
 @input
-structure CreateRealmInput {
+structure UpdateRealmInput {
     @required
+    @httpLabel
     @jsonName("realm")
     realm: RealmIdentifier
-
-    @required
-    @jsonName("type")
-    type: RealmType
-
-    @jsonName("acr-values")
-    acrValues: String
 
     @jsonName("autocreate")
     autoCreate: BooleanInteger
@@ -53,6 +48,12 @@ structure CreateRealmInput {
 
     @jsonName("comment")
     comment: String
+
+    @jsonName("delete")
+    delete: BooleanInteger
+
+    @jsonName("digest")
+    digest: String
 
     @jsonName("default")
     default: BooleanInteger
@@ -119,9 +120,6 @@ structure CreateRealmInput {
 
     @jsonName("user_classes")
     userClasses: String
-
-    @jsonName("username-claim")
-    usernameClaim: String
 
     @jsonName("verify")
     verify: BooleanInteger
