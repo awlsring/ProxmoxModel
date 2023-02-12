@@ -6,6 +6,9 @@ resource Group {
     identifiers: { groupId: GroupIdentifier }
     list: ListGroups
     read: GetGroupDetails
+    update: UpdateGroup
+    delete: DeleteGroup
+    operations: [ CreateGroup ]
 }
 
 string GroupIdentifier

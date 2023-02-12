@@ -12,7 +12,7 @@ This is a tracker of what resources have been implemented and what is left to do
 
 - [ ] access (in progress)
     - [x] domains
-    - [ ] groups
+    - [x] groups
     - [ ] roles
     - [ ] openid
     - [ ] roles
