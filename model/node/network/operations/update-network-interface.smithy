@@ -62,6 +62,9 @@ structure UpdateNetworkInterfaceInput {
     @jsonName("comments6")
     ipv6Comments: String
 
+    @jsonName("delete")
+    attributesToDelete: String
+
     @jsonName("gateway")
     ipv4Gateway: Ipv4Address
 
