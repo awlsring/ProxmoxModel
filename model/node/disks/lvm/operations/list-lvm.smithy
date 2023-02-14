@@ -39,7 +39,6 @@ structure ListLVMsData {
 }
 
 structure LVMChild {
-    @required
     children: LVMChildren
 
     @required
