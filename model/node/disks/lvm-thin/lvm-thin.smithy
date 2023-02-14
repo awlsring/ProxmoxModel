@@ -12,7 +12,7 @@ resource LVMThin {
 structure LVMThinSummary {
     @required
     @jsonName("lv")
-    name: LVMThinSummaries
+    name: String
 
     @required
     @documentation("The size of the lvm thin pool in bytes")
