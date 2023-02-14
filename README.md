@@ -13,9 +13,7 @@ This is a tracker of what resources have been implemented and what is left to do
 - [ ] access (in progress)
     - [x] domains
     - [x] groups
-    - [ ] roles
-    - [ ] openid
-    - [ ] roles
+    - [x] roles
     - [ ] tfa
     - [x] users
 
