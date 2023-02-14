@@ -25,6 +25,12 @@ structure DeleteLVMThinInput {
     @documentation("The storage identifier.")
     name: String
 
+    @required
+    @httpQuery("volume-group")
+    @jsonName("volume-group")
+    @documentation("The volume group name.")
+    volumeGroup: String
+
     @httpQuery("cleanup-config")
     @documentation("Marks the associated storage as not available on this node anr removes them from the config. Takes a boolean integer value (0 false, 1 true).")
     cleanupConfig: Integer
