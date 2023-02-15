@@ -22,7 +22,13 @@ structure StorageSummary {
     @documentation("Comma seperated list of content types in storage. Returned as a string")
     content: String,
 
-    digest: String,
+    @jsonName("server")
+    @documentation("The storage server")
+    server: String,
+
+    @jsonName("shared")
+    @documentation("Whether the storage is shared")
+    shared: BooleanInteger,
 
     thinpool: String,
 
@@ -39,9 +45,17 @@ structure StorageSummary {
     @documentation("The storage path")
     path: String,
 
+    @jsonName("export")
+    @documentation("The storage export")
+    export: String,
+
     @jsonName("mountpoint")
     @documentation("The storage mountpoint")
     mount: String,
+
+    @jsonName("digest")
+    @documentation("The storage digest")
+    digest: String,
 
     @jsonName("nodes")
     @documentation("The nodes that have access to this storage")
