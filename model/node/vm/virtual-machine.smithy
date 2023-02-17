@@ -36,7 +36,8 @@ resource VirtualMachine {
         GetVirtualMachineNetworkInterfaces,
         PingVirtualMachine,
         VirtualMachineExecuteCommand,
-        GetVirtualMachineCommandStatus
+        GetVirtualMachineCommandStatus,
+        VirtualMachineReadFile
     ]
 }
 
