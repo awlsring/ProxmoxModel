@@ -37,7 +37,8 @@ resource VirtualMachine {
         PingVirtualMachine,
         VirtualMachineExecuteCommand,
         GetVirtualMachineCommandStatus,
-        VirtualMachineReadFile
+        VirtualMachineReadFile,
+        VirtualMachineWriteFile,
     ]
 }
 
