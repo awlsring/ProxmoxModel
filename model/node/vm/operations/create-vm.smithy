@@ -359,6 +359,9 @@ structure CreateVirtualMachineInput {
     @documentation("Host parallel device.")
     parallelDevice2: String
 
+    @jsonName("pool")
+    resourcePool: PoolIdentifier
+
     @jsonName("protection")
     @documentation("The protection flag on the virtual machine. Disables remove VM and disk operations.")
     protection: BooleanInteger
