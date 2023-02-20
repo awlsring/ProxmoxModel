@@ -8,11 +8,8 @@ enum VirtualMachineBios {
 }
 
 enum VirtualMachineArchitecture {
-    @documentation("x86_64")
-    X86_64,
-
-    @documentation("aarch64")
-    AARCH64,
+    X86_64 = "x86_64",
+    AARCH64 "aarch64"
 }
 
 enum VirtualMachineCloudInitType {
