@@ -39,7 +39,10 @@ resource VirtualMachine {
         GetVirtualMachineCommandStatus,
         VirtualMachineReadFile,
         VirtualMachineWriteFile,
-        RebootVirtualMachine
+        RebootVirtualMachine,
+        StartVirtualMachine,
+        StopVirtualMachine,
+        ShutdownVirtualMachine,
     ]
 }
 
