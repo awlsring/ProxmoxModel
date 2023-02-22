@@ -43,6 +43,9 @@ resource VirtualMachine {
         StartVirtualMachine,
         StopVirtualMachine,
         ShutdownVirtualMachine,
+        ResetVirtualMachine,
+        ResumeVirtualMachine,
+        SuspendVirtualMachine,
     ]
 }
 
