@@ -38,8 +38,8 @@ This is a tracker of what resources have been implemented and what is left to do
         - [ ] agent
         - [x] cloudinit
         - [ ] firewall
-        - [ ] snapshot
-        - [ ] status (in progress)
+        - [ ] snapshot (in progress)
+        - [x] status
     - [ ] replication
     - [ ] scan
     - [ ] sdn

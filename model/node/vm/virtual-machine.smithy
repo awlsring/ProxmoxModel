@@ -9,6 +9,7 @@ resource VirtualMachine {
     },
     delete: DeleteVirtualMachine,
     list: ListVirtualMachines,
+    resources: [ Snapshot ]
     operations: [
         CreateVirtualMachine,
         CreateVirtualMachineTemplate,
