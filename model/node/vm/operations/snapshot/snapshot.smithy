@@ -9,6 +9,9 @@ resource Snapshot {
         snapshot: SnapshotIdentifier
     },
     list: ListSnapshots,
+    operations: [
+        CreateSnapshot,
+    ]
 }
 
 @documentation("The snapshot name.")
