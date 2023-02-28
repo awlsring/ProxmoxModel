@@ -47,6 +47,7 @@ resource VirtualMachine {
         ResetVirtualMachine,
         ResumeVirtualMachine,
         SuspendVirtualMachine,
+        ListVirtualMachineFirewallReferences
     ]
 }
 
