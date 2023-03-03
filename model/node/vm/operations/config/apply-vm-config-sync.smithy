@@ -584,6 +584,38 @@ structure ApplyVirtualMachineConfigurationSyncInput {
     @documentation("Configure a disk for storing TPM state.")
     tpmState0: String
 
+    @jsonName("unused0")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk0: String
+
+    @jsonName("unused1")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk1: String
+
+    @jsonName("unused2")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk2: String
+
+    @jsonName("unused3")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk3: String
+
+    @jsonName("unused4")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk4: String
+
+    @jsonName("unused5")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk5: String
+
+    @jsonName("unused6")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk6: String
+
+    @jsonName("unused7")
+    @documentation("An unused disk on the virtual machine.")
+    unusedDisk7: String
+
     @jsonName("usb0")
     @documentation("A usb device on the virtual machine.")
     usbDevice0: String
