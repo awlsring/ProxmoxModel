@@ -19,6 +19,7 @@ resource Node {
         ApplyNetworkInterfaceConfiguration, 
         RevertNetworkInterfaceConfiguration 
         GetNodeDns,
+        UpdateNodeDns,
     ]
 }
 
