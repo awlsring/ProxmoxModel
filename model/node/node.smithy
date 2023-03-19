@@ -14,12 +14,14 @@ resource Node {
         Certificate,
         Hardware,
         NodeStorage,
+        CephMonitor
     ],
     operations: [ 
         ApplyNetworkInterfaceConfiguration, 
         RevertNetworkInterfaceConfiguration 
         GetNodeDns,
         UpdateNodeDns,
+        InitCephCluster
     ]
 }
 
