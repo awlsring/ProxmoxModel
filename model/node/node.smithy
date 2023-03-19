@@ -14,7 +14,8 @@ resource Node {
         Certificate,
         Hardware,
         NodeStorage,
-        CephMonitor
+        CephMonitor,
+        CephManager
     ],
     operations: [ 
         ApplyNetworkInterfaceConfiguration, 
